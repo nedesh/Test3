@@ -12,13 +12,5 @@ public class CreditData {
         this.clientType = clientType;
     }
 
-    @Override
-    public String toString() {
-        return "CreditData{" +
-                "credit=" + credit +
-                ", payment=" + payment +
-                ", percent=" + percent +
-                ", clientType='" + clientType + '\'' +
-                '}';
-    }
+
 }
