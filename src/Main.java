@@ -22,14 +22,10 @@ public class Main {
         Double payment = Double.valueOf(array[1]);
         Double percent = Double.valueOf(array[2]);
         String clientType = String.valueOf(array[3]);
-        CreditData creditData = new CreditData(credit, payment, percent, clientType);
-
         checkException(credit, payment);
+        CreditData creditData = new CreditData(credit, payment, percent, clientType);
         CreditCalculator calc = new CreditCalculator();
         double credit1 = calc.calculateOverpayment(creditData);
-       // CreditData calc = new CreditData();
-        //double credit1 = calc.CreditCalculator(credit, payment, percent, clientType);
-//        checkException(credit, payment);
         System.out.println("результат переплаты " + credit1);
     }
 }
