@@ -2,8 +2,6 @@ public class CreditCalculator {
 
 
     public double calculateOverpayment(CreditData creditData) {
-        String clientType = creditData.clientType;
-
 
         double overpayment = 0;
         double paymentPerYear;
@@ -27,11 +25,6 @@ public class CreditCalculator {
             creditData.credit += paymentPerYear;
             overpayment += paymentPerYear;
             creditData.credit = creditData.credit < creditData.payment * 12 ? 0 : creditData.credit;
-
-            if (creditData.payment * 12 < paymentPerYear) {
-
-                break;
-            }
         }
         return overpayment;
     }
